@@ -1,7 +1,6 @@
-// minify.js
-var Terser = require("terser");
-var fs = require("fs");
-var path = require("path");
+const Terser = require("terser");
+const fs = require("fs");
+const path = require("path");
 
 function getAllFiles(dirPath, arrayOfFiles) {
   let files = fs.readdirSync(dirPath);
@@ -20,6 +19,12 @@ function getAllFiles(dirPath, arrayOfFiles) {
 }
 
 async function minifyFiles(filePaths) {
+  let settings = {
+    mangle: {
+      properties: false,
+    },
+  };
+
   filePaths.forEach(async (filePath) => {
     try {
       const { code } = await Terser.minify(
@@ -33,11 +38,10 @@ async function minifyFiles(filePaths) {
   });
 }
 
-let settings = {
-  mangle: {
-    properties: true,
-  },
-};
-
-const files = getAllFiles("out");
-minifyFiles(files);
+const targetDirectory = process.argv[2];
+if (targetDirectory) {
+  const files = getAllFiles(targetDirectory);
+  minifyFiles(files);
+} else {
+  console.error("Please specify a target directory.");
+}

@@ -1,0 +1,25 @@
+{
+  "name": "terser-output",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QuentinGruber/terser-output.git"
+  },
+  "keywords": [
+    "terser"
+  ],
+  "author": "Quentin Gruber",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/QuentinGruber/terser-output/issues"
+  },
+  "homepage": "https://github.com/QuentinGruber/terser-output#readme",
+  "dependencies": {
+    "terser": "5.7.0"
+  }
+}
