@@ -1,3 +1,4 @@
+#! /usr/bin/env node
 const Terser = require("terser");
 const fs = require("fs");
 const path = require("path");
