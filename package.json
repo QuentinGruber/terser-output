@@ -1,6 +1,6 @@
 {
   "name": "terser-output",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "index.js",
   "bin": {
@@ -23,6 +23,6 @@
   },
   "homepage": "https://github.com/QuentinGruber/terser-output#readme",
   "dependencies": {
-    "terser": "5.7.0"
+    "terser": "5.7.2"
   }
 }
