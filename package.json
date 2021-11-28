@@ -23,6 +23,6 @@
   },
   "homepage": "https://github.com/QuentinGruber/terser-output#readme",
   "dependencies": {
-    "terser": "5.7.2"
+    "terser": "5.10.0"
   }
 }
